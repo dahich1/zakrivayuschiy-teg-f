@@ -228,7 +228,6 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: transparent;
   outline: 2px solid var(--main-color, rgba(0, 0, 0, 1));
   transition: 0.3s ease;
 }
@@ -376,3 +375,32 @@
     width: 257px;
   }
 }
+
+.bright {
+  filter: brightness(105%);
+}
+
+.contrast {
+  filter: contrast(70%);
+}
+
+.opacity {
+  filter: opacity(0.5);
+}
+
+.hue-rotate {
+  filter: hue-rotate(40deg);
+}
+
+.negative {
+  filter: invert(30%);
+}
+
+.sepia {
+  filter: sepia(70%) saturate(70%);
+}
+
+.game {
+  filter: grayscale(40%);
+}
+
