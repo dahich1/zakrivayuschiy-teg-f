@@ -5,78 +5,80 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 :root.theme-dark {
-  --main-font: 'Inter';
-  --accent-font: 'PressStart2P';
+  --main-font: "Inter";
+  --accent-font: "PressStart2P";
   --font-weight-title: 785;
   --font-weight-text: 465;
   --font-size-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --content-container: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  --background-image:
-      repeating-linear-gradient(to right,
+  --background-image: repeating-linear-gradient(
+      to right,
       rgba(0, 0, 0, 1) 0 2px,
-        transparent 2px 4px),
-      repeating-linear-gradient(to bottom,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
       rgba(0, 0, 0, 1) 0 2px,
-        transparent 2px 4px),
-      linear-gradient(rgba(0, 127, 12, 1),
-      rgba(0, 67, 6, 1));
+      transparent 2px 4px
+    ),
+    linear-gradient(rgba(0, 127, 12, 1), rgba(0, 67, 6, 1));
   --background-color: rgba(0, 0, 0, 1);
   --main-color: rgba(0, 204, 20, 1);
   --color-like-button: rgba(0, 204, 20, 1);
-  --contour: rgba(0, 0, 0, 1);
+  --contour: rgba(255, 255, 255, 1);
   --sparks: rgba(255, 0, 0, 1);
   ---main-body: rgba(255, 0, 0, 1);
 }
 
 :root.theme-light {
-  --main-font: 'Inter';
-  --accent-font: 'PressStart2P';
+  --main-font: "Inter";
+  --accent-font: "PressStart2P";
   --font-weight-title: 700;
   --font-weight-text: 400;
   --font-size-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --content-container: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  --background-image:
-    repeating-linear-gradient(to right,
+  --background-image: repeating-linear-gradient(
+      to right,
       #d3d3d3 0 2px,
-      transparent 2px 4px),
-    repeating-linear-gradient(to bottom,
-      #d3d3d3 0 2px,
-      transparent 2px 4px),
-    linear-gradient(#e7e7e7,
-      #1a1a1a);
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
   --background-color: rgba(255, 255, 255, 1);
   --main-color: rgba(0, 0, 0, 1);
   --color-like-button: rgba(255, 255, 255, 1);
   --contour: rgba(0, 0, 0, 1);
   --sparks: rgba(255, 0, 0, 1);
-  ---main-body: rgba(255, 0, 0, 1);
+  --main-body: rgba(255, 0, 0, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-font: 'Inter';
-    --accent-font: 'PressStart2P';
+    --main-font: "Inter";
+    --accent-font: "PressStart2P";
     --font-weight-title: 785;
     --font-weight-text: 465;
     --font-size-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --font-size-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --content-container: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-    --background-image:
-      repeating-linear-gradient(to right,
-      rgba(0, 0, 0, 1) 0 2px,
-        transparent 2px 4px),
-      repeating-linear-gradient(to bottom,
-      rgba(0, 0, 0, 1) 0 2px,
-        transparent 2px 4px),
-      linear-gradient(rgba(0, 127, 12, 1),
-      rgba(0, 67, 6, 1));
+    --background-image: repeating-linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0 2px,
+        transparent 2px 4px
+      ),
+      linear-gradient(rgba(0, 127, 12, 1), rgba(0, 67, 6, 1));
     --background-color: rgba(0, 0, 0, 1);
     --main-color: rgba(0, 204, 20, 1);
     --color-like-button: rgba(0, 204, 20, 1);
-    --contour: rgba(0, 0, 0, 1);
+    --contour: rgba(255, 255, 255, 1);
     --sparks: rgba(255, 0, 0, 1);
-    ---main-body: rgba(255, 0, 0, 1);
+    --main-body: rgba(255, 0, 0, 1);
   }
 }

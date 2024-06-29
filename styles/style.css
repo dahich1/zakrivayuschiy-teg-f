@@ -15,7 +15,7 @@
 */
 
 .page {
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: "wght" var(--font-weight-text)
     var(--font-weight-title);
   background-color: var(--background-color, rgba(255, 255, 255, 1));
@@ -28,30 +28,33 @@
 }
 
 .header {
-  min-block-size: 364px;
   margin-top: 100px;
   margin-bottom: 100px;
   padding-top: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  gap: 22px;
   background-color: var(--background-color, rgba(255, 255, 255, 1));
   border: 2px solid var(--main-color, rgba(0, 0, 0, 1));
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--font-weight-text);
+  text-transform: uppercase;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem)
+    clamp(0rem, 11.268vw - 2.641rem, 7.5rem) 25px;
+}
+
+.header__logo:focus {
+  outline: none;
 }
 
 .header__logo {
   font-size: var(--font-size-title);
-  text-transform: uppercase;
   text-decoration: none;
 }
 
 .header__title {
   font-size: var(--font-size-subtitle);
-  text-transform: uppercase;
 }
 
 .theme-menu__list {
@@ -59,18 +62,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 11px;
+  gap: 12px;
   padding-left: 17px;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  text-align: left;
 }
 
 .theme-menu__item {
   position: relative;
 }
-
 /*кнопки*/
 .theme-menu__button {
   text-transform: uppercase;
@@ -78,6 +77,7 @@
   position: relative;
   cursor: pointer;
   background-color: transparent;
+  transition: ease 0.3s;
 }
 
 .theme-menu__button:disabled::before {
@@ -87,16 +87,11 @@
   inset-block-start: 0;
   color: var(--main-color, rgba(0, 0, 0, 1));
   opacity: 0.6;
-  animation-name: arrow;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: ease 0.3s;
   pointer-events: none;
 }
 
@@ -104,7 +99,7 @@
   content: "";
   position: absolute;
   border-bottom: 2px solid var(--main-color, rgba(0, 0, 0, 1));
-  width: 90%;
+  width: 85%;
   inset-inline-start: 5px;
   inset-block-end: 0;
   transform: scale(0, 1);
@@ -123,7 +118,6 @@
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: ease 0.3s;
 }
 /*карточки*/
 .article {
@@ -133,19 +127,19 @@
 }
 
 .cart_title {
-  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--font-weight-title);
   font-size: 18px;
   line-height: 21.78px;
   text-align: left;
-  font-weight: var(--font-weight-title);
   padding-inline: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .card_image {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
   border: 2px solid black;
@@ -162,7 +156,7 @@
   top: 25px;
   padding-top: 10px;
   position: absolute;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--font-weight-text);
   text-shadow: 0 0 1px var(--background-color, rgba(255, 255, 255, 1));
   opacity: 0.5;
@@ -190,7 +184,7 @@
 }
 
 .card__content-text {
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), fantasy, sans-serif;
   font-weight: var(--font-weight-text);
   line-height: 21px;
   font-size: 18px;
@@ -202,17 +196,19 @@
   padding-inline-end: 25px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 5px;
   margin-block: 25px;
 }
 
 .button {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-weight: var(--font-weight-text);
   color: var(--main-color, rgba(0, 0, 0, 1));
   border: 2px solid var(--main-color, rgba(0, 0, 0, 1));
   position: relative;
   background-color: transparent;
+  transition: ease 0.3s;
 }
 
 .button:hover {
@@ -225,11 +221,13 @@
   align-self: self-end;
   outline: 2px solid transparent;
   outline-offset: -2px;
+  transition: 0.3s ease;
+  inline-size: 38px;
+  block-size: 38px;
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--main-color, rgba(0, 0, 0, 1));
-  transition: 0.3s ease;
 }
 
 .card__like-button {
@@ -242,7 +240,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--main-color, rgba(0, 0, 0, 1));
-  transition: ease 0.3s;
   outline: none;
 }
 
@@ -255,7 +252,7 @@
   inset-block-end: 0;
   transform: scale(0, 1);
   transform-origin: left;
-  transition: ease 0.3s;
+  transition: 0.5s ease-in-out;
   background-color: var(--main-color, rgba(0, 0, 0, 1));
 }
 
@@ -269,7 +266,7 @@
   color: var(--color-like-button, rgba(255, 255, 255, 1));
   mix-blend-mode: difference;
   z-index: 2;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 12.6px;
@@ -308,7 +305,7 @@
 }
 
 .window {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: var(--main-color, rgba(0, 0, 0, 1));
@@ -342,7 +339,7 @@
   align-self: center;
 }
 
-@media (width < 480px) {
+@media (width < 460px) {
   .page {
     width: 100%;
   }
@@ -354,6 +351,11 @@
 
   .header__logo {
     margin-block-start: 120px;
+  }
+
+  .cart_title {
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   .image-cont {
@@ -371,8 +373,24 @@
     padding-inline: 40px;
   }
 
+  .dialog.dialog:is([open]) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dialog-text {
+    inline-size: 198px;
+  }
+
   .dialog-button {
     width: 257px;
+  }
+
+  .disk {
+    width: 28px;
+    height: 28px;
+    align-self: center;
   }
 }
 
@@ -403,4 +421,3 @@
 .game {
   filter: grayscale(40%);
 }
-
