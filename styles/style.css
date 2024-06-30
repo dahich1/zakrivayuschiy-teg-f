@@ -16,8 +16,7 @@
 
 .page {
   font-family: var(--main-font), Arial, sans-serif;
-  font-variation-settings: "wght" var(--font-weight-text)
-    var(--font-weight-title);
+  font-variation-settings: "wght" var(--font-weight-text);
   background-color: var(--background-color, rgba(255, 255, 255, 1));
   background-image: var(--background-image);
   background-size: cover;
@@ -142,7 +141,7 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
-  border: 2px solid black;
+  border: 2px solid var(--main-color);
 }
 
 .image-cont {
@@ -153,7 +152,7 @@
   font-size: 14px;
   line-height: 14px;
   right: 25px;
-  top: 25px;
+  top: 15px;
   padding-top: 10px;
   position: absolute;
   font-family: var(--accent-font), fantasy, sans-serif;
@@ -180,6 +179,7 @@
   or (text-stroke: 1px var(--background-color, rgba(255, 255, 255, 1))) {
   .card__label {
     -webkit-text-stroke: 1px var(--background-color, rgba(255, 255, 255, 1));
+    text-shadow: none;
   }
 }
 
@@ -224,6 +224,8 @@
   transition: 0.3s ease;
   inline-size: 38px;
   block-size: 38px;
+  display: flex;
+  align-items: center;
 }
 
 .card__icon-button:focus-visible {
@@ -358,6 +360,11 @@
     padding-bottom: 4px;
   }
 
+  .card__label {
+    top: 13px;
+    right: 11px;
+  }
+
   .image-cont {
     block-size: 375px;
     margin-block-end: 26px;
@@ -370,6 +377,7 @@
   }
 
   .dialog {
+    max-inline-size: 341px;
     padding-inline: 40px;
   }
 

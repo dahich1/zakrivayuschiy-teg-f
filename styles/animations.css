@@ -18,12 +18,8 @@
     translate: 0;
   }
 
-  50% {
-    translate: 4px;
-  }
-
   100% {
-    translate: 0;
+    translate: 4px;
   }
 }
 /*сердечко у кнопки*/
@@ -77,10 +73,7 @@
 }
 
 .like-icon.is-liked .heart {
-  animation-name: liked-heart;
-  animation-duration: 0.1s;
-  animation-timing-function: ease-in;
-  animation-direction: alternate;
+  animation: liked-heart 0.3s ease-in 0.1s alternate;
   transform-origin: center;
 }
 
